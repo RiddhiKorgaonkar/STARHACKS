@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Compliment Generator">
+        <meta name="author" content="Riddhi K">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Compliment Generator</title>
+        <link rel="stylesheet" href="style.css">
+        <!--Link Tailwind CSS-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+    </head>
+    <body>
+            <br><br>
+            <div class="container mx-auto px-4">
+                <h1 class="text-center text-6xl font-extrabold text-black">Compliment Generator</h1>
+            </div>
+            <input type="text" id="compliment" class="bg-blue-500 w-full text-white font-bold py-2 px-4 rounded-full" readonly>
+            <!--Make the input field appear in the center of the screen-->
+            <style>
+                #compliment{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                #generate{
+                    position: absolute;
+                    top: 60%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            </style>
+            <button id="generate" class="bg-blue-400 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-full" onclick=showCompliment()>
+                Compliment Me!
+            </button>
+            
+           
+            <script>
+               
+                function showCompliment() {
+                    var compliments = ["You're such a good cook!",
+                        "You always know exactly what to say.",
+                        "I appreciate all you have taught me.",
+                        "Your a good friend.",
+                        "Your so creative.",
+                        "You are all that and a super-size bag of chips.",
+                        "You have got all the right moves.",
+                        "You are an incredible human.",
+                        "I think your ideas /beliefs matter.",
+                        "You have great taste in music.",
+                        "Your really  intelligent.",
+                        "You are really good at figuring stuff out.",
+                        "you look very beautiful",
+                        "you are perfect just the way you are",
+                        "everything would be better if more people were like you",
+                        "you are enough",
+                        "on a scale from 1 to 10, you're an 11",
+                        "you're like sunshine on a rainy day",
+                     "jokes are funnier when you tell them",
+                     "i like your style",
+                     "that color is perfect on you",
+                        "you are glowing",
+                        "that's the least interesting thing about you, too",
+                     "you always know just what to say",
+                        "the people you love are lucky to have you in their lives",
+                        "hanging out with you is always fun",
+                     "you're an awesome friend",
+                     "i am so proud of you, and i hope you are too!",
+                        "you're a great example to others",
+                     "you're great at figuring stuff out",
+                        "you're a smart cookie",
+                     "your perspective is refreshing",
+                        "actions speak louder than words",
+                        "yours tell an incredible story",
+                        "being around you makes everything better",
+                        "any team would be lucky to have you on it",
+                        "there's ordinary",
+                     "then there's you",
+                        "who raised you? they deserve a medal for a job well done",
+                     "you're even better than a unicorn because you're real",
+                     "you're really something special",
+                     "if you were a box of crayons, you'd be the big industrial name-brand one with a built-in sharpener",
+                        "you are one of a kind",
+                     "you are an incredible human",
+                        "you may dance like no one's watching",
+                     "everyone's watching because you're mesmerizing",
+                     "your voice is magnificent",
+                     "how is it that you always look so great, even if you're in ratty pajamas",
+                     "you're wonderful",
+                     "somehow you make time stop and fly all at the same time",
+                    ];
+                    var randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+                    document.getElementById("compliment").value = randomCompliment;
+                }
+            </script>
+        </div>
+    </body>
+</html>
